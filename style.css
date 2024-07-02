@@ -2,6 +2,7 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
 }
+
 header {
   display: flex;
   flex-direction: column;
@@ -9,41 +10,169 @@ header {
   text-align: center;
   padding: 20px;
 }
-header div {
-  margin: 10px;
+
+header .links {
+  justify-content: center;
 }
+
 img {
   max-width: 100%;
   height: auto;
 }
+
 h1 {
   font-size: 2em;
   margin: 10px 0;
 }
+
 h2 {
   font-size: 1.5em;
   margin: 10px 0;
 }
+
 p {
   font-size: 1em;
   margin: 10px 0;
 }
+
 .links {
   display: flex;
-  justify-content: center;
   gap: 15px;
+  margin: 15px 0;
 }
+
 .links i {
   font-size: 2em;
 }
+
+main {
+  padding: 20px;
+}
+
+section {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.card-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.card .card-body {
+  padding: 15px;
+}
+
+.card h5 {
+  margin: 10px 0;
+  font-size: 1.25em;
+}
+
+.card .links {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.card .links i {
+  font-size: 1.5em;
+}
+
+.card p {
+  margin: 10px 0;
+  font-size: 1em;
+  color: #555;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #f8f8f8;
+}
+
+footer div {
+  margin: 10px;
+}
+
+footer h2 {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+}
+
+footer p {
+  margin: 5px 0;
+}
+
+footer img {
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+}
+
 @media (min-width: 768px) {
   header {
     flex-direction: row;
     justify-content: space-around;
     text-align: left;
+    gap: 2em;
   }
+
+  header .links {
+    justify-content: flex-start;
+  }
+
   header div {
     flex: 1;
-    margin: 20px;
+    /* margin: 20px; */
+  }
+
+  section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  footer {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  footer img {
+    width: 40%;
+    margin-top: 0;
+    align-self: center;
+  }
+}
+
+@media (min-width: 992px) {
+  /* header .hero-thumb {
+    text-align: center;
+  } */
+
+  header .links {
+    justify-content: flex-end;
+  }
+
+  section {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
