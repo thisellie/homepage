@@ -7,17 +7,21 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
   padding: 20px;
+}
+
+header .hero-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
 }
 
 header .links {
   justify-content: center;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
+header > * {
+  margin: 20px;
 }
 
 h1 {
@@ -27,12 +31,17 @@ h1 {
 
 h2 {
   font-size: 1.5em;
-  margin: 10px 0;
+  margin: 20px 0;
 }
 
 p {
   font-size: 1em;
   margin: 10px 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .links {
@@ -135,7 +144,6 @@ footer img {
     flex-direction: row;
     justify-content: space-around;
     text-align: left;
-    gap: 2em;
   }
 
   header .links {
@@ -144,7 +152,6 @@ footer img {
 
   header div {
     flex: 1;
-    /* margin: 20px; */
   }
 
   section {
@@ -164,14 +171,6 @@ footer img {
 }
 
 @media (min-width: 992px) {
-  /* header .hero-thumb {
-    text-align: center;
-  } */
-
-  header .links {
-    justify-content: flex-end;
-  }
-
   section {
     grid-template-columns: repeat(3, 1fr);
   }
